@@ -45,10 +45,23 @@ module.exports = {
                                     {
                                         modules: false,
                                         targets: {
-                                            browsers: 'last 5 versions, ie 10-11',
+                                            browsers: 'last 1 versions, ie 10-11',
                                         },
                                     },
                                 ]    
+                            ],
+                            plugins: [
+                                '@babel/plugin-transform-runtime',
+                                '@babel/plugin-proposal-do-expressions',
+                                '@babel/plugin-proposal-function-bind',
+                                '@babel/plugin-proposal-logical-assignment-operators',
+                                '@babel/plugin-proposal-partial-application',
+                                [
+                                    '@babel/plugin-proposal-pipeline-operator',
+                                    {
+                                        proposal: 'smart'
+                                    }
+                                ]
                             ]
                         }
                     }
